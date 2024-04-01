@@ -18,3 +18,33 @@
 .nested-links a{
   overflow-wrap: break-word;
 }
+
+.logo-image {
+  position: absolute;
+  top: 40%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to the exact center */
+  max-width: 100%; /* Maximum width is 100% of the parent container */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 10; /* Ensure it's on top of other content */
+}
+
+.enquire-button-wrapper {
+  text-align: center; /* Center the button */
+  position: relative;
+  top: -530px;
+}
+
+.enquire-button {
+  display: inline-block; /* Make the anchor behave like a button */
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  border: 2px solid #ffffff; /* White border */
+  padding: 12px 24px; /* Padding to increase the size */
+  font-weight: bold; /* Bold font */
+  font-size: 16px; /* Adjust font size as necessary */
+  text-align: center; /* Center the text inside the button */
+  text-decoration: none; /* Remove the underline from the link */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Transition for the hover effects */
+}
