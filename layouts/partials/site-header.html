@@ -1,10 +1,13 @@
 {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
 {{ if $featured_image }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-  <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
+  <header class="cover bg-top" style="background-image: url('{{ $featured_image }}'); position: relative;">
     <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-60" }}">
       {{ partial "site-navigation.html" .}}
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+      <div class="logo-overlay">
+          <img src="/images/AL_&_the_Capo_(1)_(1).png" class="logo-image">
+      </div>
+      <div class="tc-l pv5 pv7-l ph3 ph4-ns" style="padding-top: 100px; padding-bottom: 1000px;">
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
           {{ .Title | default .Site.Title }}
         </h1>
@@ -13,6 +16,11 @@
             {{ . }}
           </h2>
         {{ end }}
+      </div>
+      <div class="enquire-button-wrapper"> <!-- This wrapper div helps manage the button's position -->
+        <a href="#enquire-form" class="enquire-button">
+            Enquire Now
+        </a>
       </div>
     </div>
   </header>
